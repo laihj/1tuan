@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sites>
+  <site ver="1">
+    <loca>beijing</loca>
+
+    <title>美团</title>
+    <url>http://www.google.com/reader/atom/feed/http://www.meituan.com/feed/beijing?n=1</url>
+  </site>
+  <site ver="1">
+    <loca>beijing</loca>
+    <title>拉手</title>
+    <url>http://www.google.com/reader/atom/feed/http://www.lashou.com/rss.php?cityid=2419?n=1</url>
+  </site>
+</sites>
