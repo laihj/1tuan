@@ -6,6 +6,8 @@ import android.widget.ListView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.res.Resources;
+import android.content.Intent;
+import android.util.Log;
     
 
 import java.util.ArrayList;
@@ -38,8 +40,10 @@ public class ytuan extends Activity
     @Override
     public void onResume() {
 	super.onResume();
+	Log.i("resume","begin");
 	ytuanApplication application = (ytuanApplication) getApplication();
 	dbHelper = application.getDatabase();
+	Log.i("resume","i");
 	this.sites =(ArrayList<Site>) dbHelper.getAll("('beijing')");
 	application.setList(this.sites);
 	this.siteAdapter = new SiteAdapter(this,sites);
@@ -96,6 +100,14 @@ public class ytuan extends Activity
 		site.updated = false;
 	    }
 	}
+    }
+
+    public void showDetail(Site site) {
+	long index;
+	Intent intent = new Intent("net.laihj.ytuan.action.DETAIL");
+	index = sites.indexOf(site);
+	intent.putExtra("siteid",index);
+	startActivity(intent);
     }
     
 }

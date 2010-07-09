@@ -24,7 +24,7 @@ public class Site
     }
     
     public String getSummary() {
-	return this.feedurl + "hellohello aggaeqddddddddddddddddddgogoogoogoogkbi bigaede  ggg hhhhhhhhhh adbe adf e f adf ae faedf ";
+	return "[" + this.name + "] " + this.title;
     }
 }
 
