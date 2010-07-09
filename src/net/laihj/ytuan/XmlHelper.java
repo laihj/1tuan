@@ -54,7 +54,8 @@ public class XmlHelper {
 	StringBuffer result = new StringBuffer();
 
 	try{
-	    URL url = new URL("http://www.meituan.com/feed/beijing");
+	    URL url = new URL(site.feedurl);
+	    Log.i("get",site.feedurl);
 	    InputStreamReader isr  = new InputStreamReader(url.openStream());
 	    BufferedReader in = new BufferedReader(isr);
 	    String inputLine;
@@ -64,18 +65,35 @@ public class XmlHelper {
 	    result = result.delete(0,result.indexOf("<item>"));
 	    result = result.delete(result.indexOf("</item>") + 7,result.length()-1);
 	    String title = result.substring(result.indexOf("<title>") + 7,result.indexOf("</title>"));
-	    String Summary = result.substring(result.indexOf("<description>") + 22,result.indexOf("</description>") - 3);
+	    String Summary;
+	    if ( -1 == result.indexOf("CDATA") ) {
+		Summary = result.substring(result.indexOf("<description>") + 13,result.indexOf("</description>"));
+	    } else {
+		Summary = result.substring(result.indexOf("<description>") + 22,result.indexOf("</description>") - 3);
+	    }
 	    if(title.equals(site.title)) {
 	    } else {
 		site.title = title;
-		site.summary = Summary;
+		site.summary = webReplace(Summary);
 		site.updated = true;
 	    }
 	    in.close();
 	    isr.close();
 	 }catch(Exception ex){
 	    result = new StringBuffer("TIMEOUT");
+	    
 	 }
 
+    }
+    public static String webReplace( String sb ) {
+
+	sb = sb.replace("&lt;","<");
+	sb = sb.replace("&gt;",">");
+	sb = sb.replace("&amp;","&");
+	sb = sb.replace("&quot;","\"");
+	sb = sb.replace("&nbsp;"," ");
+	sb = sb.replace("&lt;","<");
+	sb = sb.replace("&lt;","<");
+	return sb;
     }
 }

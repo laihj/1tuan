@@ -2,13 +2,26 @@
 <sites>
   <site ver="1">
     <loca>beijing</loca>
-
     <title>美团</title>
-    <url>http://www.google.com/reader/atom/feed/http://www.meituan.com/feed/beijing?n=1</url>
+    <url>http://www.meituan.com/feed/beijing</url>
+    <backurl>http://www.meituan.com/r/i5285</backurl>
   </site>
   <site ver="1">
     <loca>beijing</loca>
     <title>拉手</title>
-    <url>http://www.google.com/reader/atom/feed/http://www.lashou.com/rss.php?cityid=2419?n=1</url>
+    <url>http://www.lashou.com/rss.php?cityid=2419</url>
+    <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
+  </site>
+  <site ver="1">
+    <loca>beijing</loca>
+    <title>F团</title>
+    <url>http://www.ftuan.com/feed.php?ename=beijing</url>
+    <backurl>http://www.ftuan.com/r.php?r=4287</backurl>
+  </site>
+  <site ver="1">
+    <loca>qg</loca>
+    <title>猛买</title>
+    <url>http://www.feedsky.com/mengmai</url>
+    <backurl>http://www.mengmai.com/r.php?r=8795</backurl>
   </site>
 </sites>

@@ -54,6 +54,7 @@ public class DetailView extends Activity
 	sites = application.getList();
 	site = (Site) sites.get((int) siteId);
 	titleView.setText(this.site.title);
+	setTitle(this.site.name);
 	detailView.loadDataWithBaseURL("ablut:blank",procHtml(this.site.summary), "text/html", "utf-8",null);
     }
 

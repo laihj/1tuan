@@ -16,6 +16,7 @@ public class siteHandler extends DefaultHandler {
     private boolean loca;
     private boolean title;
     private boolean url;
+    private boolean backurl;
 
     private long version;
 
@@ -51,6 +52,8 @@ public class siteHandler extends DefaultHandler {
 		this.title = true;
 	    } else if ( localName.equals("url")) {
 		this.url = true;
+	    } else if ( localName.equals("backurl")) {
+		this.backurl = true;
 	    }
 	}
 	    
@@ -71,6 +74,8 @@ public class siteHandler extends DefaultHandler {
 		this.title = false;
 	    } else if ( localName.equals("url")) {
 		this.url = false;
+	    } else if ( localName.equals("backurl") ) {
+		this.backurl = false;
 	    }
 	}
     }
@@ -89,6 +94,8 @@ public class siteHandler extends DefaultHandler {
 		this.site.name = chString;
 	    } else if(this.url) {
 		this.site.feedurl = chString;
+	    } else if(this.backurl) {
+		this.site.backurl = chString;
 	    }
 	}
     }

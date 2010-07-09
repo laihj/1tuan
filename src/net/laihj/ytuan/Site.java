@@ -6,6 +6,7 @@ public class Site
 {
     public long id;
     public String feedurl;
+    public String backurl;
     public long version;
     public String location;
     public  String name;
