@@ -8,6 +8,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
+import android.util.Log;
+
 public class siteHandler extends DefaultHandler {
     private ArrayList<Site> sites = null;
     private Site site = null;
@@ -17,6 +19,7 @@ public class siteHandler extends DefaultHandler {
     private boolean title;
     private boolean url;
     private boolean backurl;
+    private boolean parse;
 
     private long version;
 
@@ -54,7 +57,9 @@ public class siteHandler extends DefaultHandler {
 		this.url = true;
 	    } else if ( localName.equals("backurl")) {
 		this.backurl = true;
-	    }
+	    } else if ( localName.equals("parse") ) {
+		this.parse = true;
+		}
 	}
 	    
     }
@@ -76,6 +81,8 @@ public class siteHandler extends DefaultHandler {
 		this.url = false;
 	    } else if ( localName.equals("backurl") ) {
 		this.backurl = false;
+	    } else if ( localName.equals("parse") ) {
+		this.parse = false;
 	    }
 	}
     }
@@ -96,6 +103,8 @@ public class siteHandler extends DefaultHandler {
 		this.site.feedurl = chString;
 	    } else if(this.backurl) {
 		this.site.backurl = chString;
+	    } else if (this.parse) {
+		this.site.parse = chString;
 	    }
 	}
     }

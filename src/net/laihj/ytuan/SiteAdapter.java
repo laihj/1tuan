@@ -24,7 +24,7 @@ import net.laihj.ytuan.Site;
 import net.laihj.ytuan.ytuan;
 
 public class SiteAdapter extends BaseAdapter {
-    private static final String CLASSTAG = siteAdapter.class.getSimpleName();
+    private static final String CLASSTAG = SiteAdapter.class.getSimpleName();
     private final Context context;
     private final List<Site> sites;
 
@@ -73,7 +73,22 @@ public class SiteAdapter extends BaseAdapter {
 	    } else {
 		this.summary.setTextColor(Color.BLACK);
 	    }
+
 	    this.addView(this.summary,rlText);
+	    this.summary.setOnClickListener(new OnClickListener() {
+		    public void onClick(View v) {
+			TextView tv = (TextView) v;
+		      	if ( siteListView.this.site.expended ) {
+			    tv.setMaxLines(2);
+			    siteListView.this.site.expended = false;
+		      	} else {
+			    tv.setMaxLines(5);
+			    siteListView.this.site.expended = true;
+		       }
+		    }
+		});
+
+	    
 	    LinearLayout.LayoutParams rlImage = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
 									      ViewGroup.LayoutParams.FILL_PARENT,1);
 	    this.ib = new ImageView(context);
@@ -84,6 +99,7 @@ public class SiteAdapter extends BaseAdapter {
 			((ytuan) siteListView.this.context).showDetail(siteListView.this.site);
 		    }
 		});
+	   
 
 	}
 	}

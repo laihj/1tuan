@@ -3,7 +3,7 @@
       package="net.laihj.ytuan"
       android:versionCode="1"
       android:versionName="1.0">
-    <application android:label="@string/app_name" android:icon="@drawable/icon"
+    <application android:label="@string/app_name" android:icon="@drawable/ytuan"
 		 android:name="ytuanApplication">
         <activity android:name="ytuan"
                   android:label="@string/app_name"
@@ -21,6 +21,15 @@
 	    <category android:name="android.intent.category.DEFAULT" />
 	  </intent-filter>
 	</activity>
+	<activity android:name="settings"
+		  android:label="@string/app_name">
+	  <intent-filter>
+	    <action android:name="net.laihj.ytuan.SETTING" />
+	    <category android:name="android.intent.category.DEFAULT" />
+	  </intent-filter>
+	</activity>
+	<meta-data android:value="5dedec7032309796" android:name="UmAd_APP_SEC" />
+	<meta-data android:value="aadddf88f1e49c3e" android:name="UmAd_APP_ID" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
 </manifest> 

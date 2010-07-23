@@ -4,13 +4,63 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
+
+
   <TextView android:id="@+id/title"
 	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content" >
+	    android:layout_height="wrap_content"
+	    android:maxLines="3"
+	    android:background="#AA000000"
+	    android:textColor="#FFFFFFFF"
+	    android:layout_weight="1"
+	    >
   </TextView>
+  <LinearLayout android:layout_height="3sp"
+		android:layout_width="fill_parent"
+		android:layout_weight="1"
+		android:background="@drawable/spar" />
+
   <WebView android:id="@+id/detail"
 	   android:layout_width="fill_parent"
-	   android:layout_height="fill_parent" >
+	   android:layout_height="fill_parent"
+	   android:layout_weight="100">
   </WebView>
-
+  <LinearLayout android:layout_height="3sp"
+		android:layout_width="fill_parent"
+		android:layout_weight="1"
+		android:background="@drawable/spar" />
+  <TableLayout android:orientation="horizontal"
+		  android:layout_width="fill_parent"
+		  android:layout_height="52sp"
+		  android:paddingLeft="20sp"
+		  android:paddingRight="20sp"
+		  android:paddingTop="3sp"
+		  android:paddingBottom="3sp"
+		  android:layout_weight="1"
+		  android:background="@drawable/bg" >
+      <TableRow>
+      <ImageView android:id="@+id/pre"
+		 
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:layout_weight="1"
+		 android:src="@drawable/pre"
+		  />
+      <ImageView android:id="@+id/buy"
+		 android:paddingLeft="20sp"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:src="@drawable/buy"
+                 android:layout_weight="1"
+		  />
+      <ImageView android:id="@+id/next"
+		 android:paddingLeft="20sp"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:clickable="false"
+		 android:src="@drawable/next"
+		 android:layout_weight="1"
+		  />
+      </TableRow>
+    </TableLayout>
 </LinearLayout>

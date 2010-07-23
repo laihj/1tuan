@@ -29,7 +29,7 @@ public class XmlHelper {
     }
 
     public static ArrayList<Site> getUpdateSite(String feedurl,long ver) {
-	ArrayList<Site> results = null;
+	ArrayList<Site> results = new ArrayList<Site> ();
        try {
             URL url = new URL(feedurl);
             SAXParserFactory spf = SAXParserFactory.newInstance();
@@ -75,6 +75,7 @@ public class XmlHelper {
 	    } else {
 		site.title = title;
 		site.summary = webReplace(Summary);
+		site.readed = false;
 		site.updated = true;
 	    }
 	    in.close();

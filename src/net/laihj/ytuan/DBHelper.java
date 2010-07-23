@@ -32,7 +32,7 @@ public class DBHelper
 
         private static final String DB_CREATE = "CREATE TABLE "
             + DBHelper.DB_TABLE
-            + " (_id INTEGER PRIMARY KEY, site_name TEXT,feedurl TEXT, title TEXT, summary  TEXT, location TEXT, showable INTEGER, readed INTEGER, ver INTEGER, backurl TEXT);";
+            + " (_id INTEGER PRIMARY KEY, site_name TEXT,feedurl TEXT, title TEXT, summary  TEXT, location TEXT, showable INTEGER, readed INTEGER, ver INTEGER, backurl TEXT, parse TEXT);";
 
         public DBOpenHelper(final Context context) {
 
@@ -90,6 +90,7 @@ public class DBHelper
 	values.put("readed",site.readed);
 	values.put("ver",site.version);
 	values.put("backurl", site.backurl);
+	values.put("parse",site.parse);
 	return this.db.insert(DBHelper.DB_TABLE, null, values);
     }
 
@@ -104,6 +105,7 @@ public class DBHelper
 	values.put("readed",site.readed);
 	values.put("ver",site.version);
 	values.put("backurl",site.backurl);
+	values.put("parse",site.parse);
 	this.db.update(DBHelper.DB_TABLE,values,"_id=" + site.id, null);
     }
 
@@ -151,6 +153,7 @@ public class DBHelper
 		site.readed = (c.getInt(7) == 0) ? false:true;
 		site.version = c.getLong(8);
 		site.backurl = c.getString(9);
+		site.parse = c.getString(10);
 		ret.add(site);
 	        c.moveToNext();
 	    }

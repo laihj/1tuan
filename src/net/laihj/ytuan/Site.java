@@ -16,12 +16,16 @@ public class Site
     public boolean readed;
     public Date pubDate;
     public boolean updated;
+    public boolean expended;
+    public String parse;
 
     public Site() {
 	this.showable = true;
 	this.readed = false;
 	this.updated = false;
+	this.expended = false;
 	this.title = "";
+	this.parse = "";
     }
     
     public String getSummary() {

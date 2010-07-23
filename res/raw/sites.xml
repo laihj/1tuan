@@ -7,9 +7,21 @@
     <backurl>http://www.meituan.com/r/i5285</backurl>
   </site>
   <site ver="1">
+    <loca>shanghai</loca>
+    <title>美团</title>
+    <url>http://www.meituan.com/feed/shanghai</url>
+    <backurl>http://www.meituan.com/r/i5285</backurl>
+  </site>
+  <site ver="1">
     <loca>beijing</loca>
     <title>拉手</title>
     <url>http://www.lashou.com/rss.php?cityid=2419</url>
+    <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
+  </site>
+  <site ver="1">
+    <loca>shanghai</loca>
+    <title>拉手</title>
+    <url>http://www.lashou.com/rss.php?cityid=2421</url>
     <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
   </site>
   <site ver="1">
@@ -19,9 +31,71 @@
     <backurl>http://www.ftuan.com/r.php?r=4287</backurl>
   </site>
   <site ver="1">
-    <loca>qg</loca>
+    <loca>beijing</loca>
     <title>猛买</title>
     <url>http://www.feedsky.com/mengmai</url>
     <backurl>http://www.mengmai.com/r.php?r=8795</backurl>
+  </site>
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>找折</title>
+    <url>http://www.zhaozhe.com/feed/Beijing.html</url>
+    <backurl>http://www.zhaozhe.com</backurl>
+  </site>
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>24券</title>
+    <url>http://www.24quan.com/feed.php?ename=bj</url>
+    <backurl>http://www.24quan.com/r.php?r=75164</backurl>
+  </site>
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>58同城</title>
+    <url>http://t.58.com/rss_c2.html</url>
+    <backurl>http://tuan.aibang.com/t/703247</backurl>
+  </site>
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>爱帮</title>
+    <url>http://tuan.aibang.com/tuan/feed_%E5%8C%97%E4%BA%AC</url>
+    <backurl>http://tuan.aibang.com/t/703247</backurl>
+  </site>
+  <site ver="2">
+    <loca>shanghai</loca>
+    <title>爱帮</title>
+    <url>http://tuan.aibang.com/tuancity_%E4%B8%8A%E6%B5%B7</url>
+    <backurl>http://t.58.com/index_cbj.html</backurl>
+  </site>
+
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>顶团</title>
+    <url>http://www.toptuan.com/feed.php?ename=beijing</url>
+    <backurl>http://www.toptuan.com/r.php?r=2143</backurl>
+  </site>
+
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>联团</title>
+    <url>http://www.liantuan001.com/feed.php?ename=beijing</url>
+    <backurl>http://www.toptuan.com/r.php?r=2143</backurl>
+  </site>
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>可购可乐</title>
+    <url>http://www.cogo-cola.com/feed.php?ename=beijing</url>
+    <backurl>http://www.cogo-cola.com/r.php?r=5476</backurl>
+  </site>
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>网团</title>
+    <url>http://www.nettuan.com/feed.php?ename=beijing</url>
+    <backurl>http://www.nettuan.com/r.php?r=4625</backurl>
+  </site>
+  <site ver="2">
+    <loca>beijing</loca>
+    <title>折学系</title>
+    <url>http://www.zhexuexi.com/feed.php?ename=Beijing</url>
+    <backurl>http://www.zhexuexi.com/</backurl>
   </site>
 </sites>

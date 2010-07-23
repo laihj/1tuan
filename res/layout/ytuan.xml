@@ -1,12 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      xmlns:umadsdk="http://schemas.android.com/apk/res/net.laihj.ytuan"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
+  <net.youmi.android.AdView
+     android:id="@+id/ad"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     umadsdk:refreshInterval="30"
+     umadsdk:changeAdAnimation="true"
+     umadsdk:backgroundTransparent="255"
+     />
+
     <ListView android:id="@+id/list"
 	    android:padding="2sp"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"/>
+            android:layout_height="fill_parent"
+	    android:layout_weight="100" />
+  <LinearLayout android:layout_height="3sp"
+		android:layout_width="fill_parent"
+		android:layout_weight="1"
+		android:background="@drawable/spar" />
+
+    <TableLayout android:orientation="horizontal"
+		  android:layout_width="fill_parent"
+		  android:layout_height="52sp"
+		  android:paddingLeft="20sp"
+		  android:paddingRight="20sp"
+		  android:paddingTop="3sp"
+		  android:paddingBottom="3sp"
+		  android:layout_weight="1"
+		
+		  android:background="@drawable/bg" >
+      <TableRow>
+      <ImageView android:id="@+id/update"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:layout_weight="1"
+		 android:src="@drawable/update"
+		  />
+      <ImageView android:id="@+id/allread"
+		 android:paddingLeft="20sp"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:src="@drawable/allread"
+                 android:layout_weight="1"
+		  />
+      <ImageView android:id="@+id/getnew"
+		 android:paddingLeft="20sp"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:src="@drawable/getnew"
+		 android:layout_weight="1"
+		  />
+      </TableRow>
+    </TableLayout>
 </LinearLayout>
 

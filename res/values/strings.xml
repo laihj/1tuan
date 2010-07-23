@@ -5,4 +5,9 @@
     <string name="update">刷新</string>
     <string name="about">关于</string>
     <string name="siteurl">http://www.laihj.net/sites.xml</string>
+    <string name="getting">正在获取 </string>
+    <string name="gettingend"> ....</string>
+    <string name="nonewsite">没有获得新的团购网站信息</string>
+    <string name="newsiteb">获得了</string>
+    <string name="newsitee">枚新的团购网站信息</string>
 </resources>
