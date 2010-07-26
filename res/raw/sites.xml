@@ -98,4 +98,10 @@
     <url>http://www.zhexuexi.com/feed.php?ename=Beijing</url>
     <backurl>http://www.zhexuexi.com/</backurl>
   </site>
+  <site ver="3">
+    <loca>beijing</loca>
+    <title>健团</title>
+    <url>http://tuan.51fit.com/feed.php?ename=beijing</url>
+    <backurl>http://tuan.51fit.com/index.php</backurl>
+  </site>
 </sites>

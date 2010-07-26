@@ -10,4 +10,6 @@
     <string name="nonewsite">没有获得新的团购网站信息</string>
     <string name="newsiteb">获得了</string>
     <string name="newsitee">枚新的团购网站信息</string>
+    <string name="select_location">关注城市</string>
+    <string name="please_select_location">请选择关注的城市</string>
 </resources>

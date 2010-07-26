@@ -5,6 +5,13 @@
                 
     <PreferenceCategory
             android:title="hello">
+      <ListPreference
+                android:key="loca_preference"
+                android:title="@string/select_location"
+                android:summary="@string/please_select_location"
+                android:entries="@array/locations"
+                android:entryValues="@array/location_values"
+                android:dialogTitle="@string/select_location" />
 
     </PreferenceCategory>
 

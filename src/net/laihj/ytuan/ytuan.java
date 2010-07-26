@@ -40,14 +40,16 @@ public class ytuan extends Activity
     private ImageView getnew;
     private ProgressDialog progressDialog;
     private Animation anim;
+    
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+		Log.i("start","start");
         setContentView(R.layout.ytuan);
 	res = getResources();
 	list = (ListView) findViewById(R.id.list);
-	
+
 	anim = AnimationUtils.loadAnimation(this,android.R.anim.fade_out);
 	
 	update = (ImageView) findViewById(R.id.update);
