@@ -48,11 +48,11 @@
 		 android:src="@drawable/allread"
                  android:layout_weight="1"
 		  />
-      <ImageView android:id="@+id/getnew"
+      <ImageView android:id="@+id/setting"
 		 android:paddingLeft="20sp"
 		 android:layout_width="wrap_content"
 		 android:layout_height="wrap_content"
-		 android:src="@drawable/getnew"
+		 android:src="@drawable/setting"
 		 android:layout_weight="1"
 		  />
       </TableRow>

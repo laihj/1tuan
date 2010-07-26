@@ -19,6 +19,8 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.Animation;
 import java.util.ArrayList;
 import android.widget.Toast;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 import net.laihj.ytuan.Site;
 import net.laihj.ytuan.SiteAdapter;
@@ -40,7 +42,8 @@ public class ytuan extends Activity
     private ImageView getnew;
     private ProgressDialog progressDialog;
     private Animation anim;
-    
+    private SharedPreferences prefs;
+    private String location;
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -55,9 +58,8 @@ public class ytuan extends Activity
 	update = (ImageView) findViewById(R.id.update);
 	update.setOnClickListener(imageLinsener);
 	allread = (ImageView) findViewById(R.id.allread);
-	allread.setAnimation(anim);
 	allread.setOnClickListener(imageLinsener);
-	getnew = (ImageView) findViewById(R.id.getnew);
+	getnew = (ImageView) findViewById(R.id.setting);
 	getnew.setOnClickListener(imageLinsener);
     }
 
@@ -68,7 +70,10 @@ public class ytuan extends Activity
 	ytuanApplication application = (ytuanApplication) getApplication();
 	dbHelper = application.getDatabase();
 	Log.i("resume","i");
-	this.sites =(ArrayList<Site>) dbHelper.getAll("('beijing')");
+	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+	location = prefs.getString("loca_preference","beijing");
+	Log.i("location",location);
+	this.sites =(ArrayList<Site>) dbHelper.getAll("('" + location + "')");
 	application.setList(this.sites);
 	this.siteAdapter = new SiteAdapter(this,sites);
 	list.setAdapter(this.siteAdapter);
@@ -79,11 +84,11 @@ public class ytuan extends Activity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        menu.add(0, MENU_SETTING, 0, R.string.setting).setIcon(
+	/*        menu.add(0, MENU_SETTING, 0, R.string.setting).setIcon(
             android.R.drawable.ic_menu_preferences);
         menu.add(0, MENU_ABOUT, 0, R.string.update).setIcon(
             android.R.drawable.ic_menu_preferences);
-
+	*/
         return true;
     }
 
@@ -92,8 +97,7 @@ public class ytuan extends Activity
 	ytuanApplication application = (ytuanApplication) getApplication();
 	switch (item.getItemId()) {
         case MENU_SETTING:
-            Intent intent = new Intent("net.laihj.ytuan.SETTING");
-	    startActivity(intent);
+
 	    return true;
 	case MENU_ABOUT:
 	    dbHelper = application.getDatabase();
@@ -119,11 +123,12 @@ public class ytuan extends Activity
 	    
 
     public void updateSites() {
-	this.progressDialog = ProgressDialog.show(this, res.getString(R.string.update) + "...", "", true, false);
+	this.progressDialog = ProgressDialog.show(this, res.getString(R.string.update) + "...", res.getString(R.string.getwebset), true, false);
         new Thread() {
             @Override
             public void run() {
 		ytuanApplication application = (ytuanApplication) getApplication();
+		getnew();
 		int count = 1;
 		dbHelper = application.getDatabase();
 		for(Site site:ytuan.this.sites) {
@@ -147,17 +152,13 @@ public class ytuan extends Activity
 	    long ver = dbHelper.getMaxVersion();
 	    ArrayList<Site> updateSite = new ArrayList<Site> ();
 	    updateSite = XmlHelper.getUpdateSite(res.getString(R.string.siteurl),ver);
-	    if ( 0 == updateSite.size() ) {
-		Toast.makeText(this,res.getString(R.string.nonewsite),200).show();
-	    } else {
-		Toast.makeText(this,res.getString(R.string.newsiteb) + updateSite.size() + res.getString(R.string.newsitee),200).show();
-	    }
-	    this.sites.addAll(updateSite);
+	    
 	    for (Site site:updateSite) {
-		dbHelper.insert(site);
+		if(this.location.equals(site.location)) {
+		    this.sites.add(site);
+		}
+		site.id = dbHelper.insert(site);
 	    }
-	    this.siteAdapter.notifyDataSetChanged();
-
     }
 
     public void showDetail(Site site) {
@@ -189,11 +190,11 @@ public class ytuan extends Activity
 		case R.id.update:
 		    ytuan.this.updateSites();
 		    break;
-		case R.id.getnew:
-		    ytuan.this.getnew();
+		case R.id.setting:
+		    Intent intent = new Intent("net.laihj.ytuan.SETTING");
+		    startActivity(intent);		    
 		    break;
 		}
-	       	((ImageView) v).setBackgroundResource(0);
 	    }
 	};
     

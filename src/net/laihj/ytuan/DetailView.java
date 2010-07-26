@@ -74,6 +74,7 @@ public class DetailView extends Activity
 	sites = application.getList();
 	Log.i("de","de");
 	site = (Site) sites.get((int) siteId);
+	Log.i("end","end");
 	updateDView();
     }
 

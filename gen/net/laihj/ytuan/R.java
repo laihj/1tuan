@@ -89,19 +89,20 @@ containing a value of this type.
         public static final int icon=0x7f020005;
         public static final int next=0x7f020006;
         public static final int pre=0x7f020007;
-        public static final int spar=0x7f020008;
-        public static final int update=0x7f020009;
-        public static final int ytuan=0x7f02000a;
+        public static final int setting=0x7f020008;
+        public static final int spar=0x7f020009;
+        public static final int update=0x7f02000a;
+        public static final int ytuan=0x7f02000b;
     }
     public static final class id {
         public static final int ad=0x7f080005;
         public static final int allread=0x7f080008;
         public static final int buy=0x7f080003;
         public static final int detail=0x7f080001;
-        public static final int getnew=0x7f080009;
         public static final int list=0x7f080006;
         public static final int next=0x7f080004;
         public static final int pre=0x7f080002;
+        public static final int setting=0x7f080009;
         public static final int title=0x7f080000;
         public static final int update=0x7f080007;
     }
@@ -118,11 +119,12 @@ containing a value of this type.
         public static final int app_name=0x7f070000;
         public static final int getting=0x7f070005;
         public static final int gettingend=0x7f070006;
-        public static final int newsiteb=0x7f070008;
-        public static final int newsitee=0x7f070009;
-        public static final int nonewsite=0x7f070007;
-        public static final int please_select_location=0x7f07000b;
-        public static final int select_location=0x7f07000a;
+        public static final int getwebset=0x7f070007;
+        public static final int newsiteb=0x7f070009;
+        public static final int newsitee=0x7f07000a;
+        public static final int nonewsite=0x7f070008;
+        public static final int please_select_location=0x7f07000c;
+        public static final int select_location=0x7f07000b;
         public static final int setting=0x7f070001;
         public static final int siteurl=0x7f070004;
         public static final int update=0x7f070002;
