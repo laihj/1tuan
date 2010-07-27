@@ -11,6 +11,8 @@ public final class R {
     public static final class array {
         public static final int location_values=0x7f060001;
         public static final int locations=0x7f060000;
+        public static final int update_time=0x7f060002;
+        public static final int update_time_values=0x7f060003;
     }
     public static final class attr {
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -120,14 +122,24 @@ containing a value of this type.
         public static final int getting=0x7f070005;
         public static final int gettingend=0x7f070006;
         public static final int getwebset=0x7f070007;
+        public static final int location_default=0x7f070012;
+        public static final int location_title=0x7f070011;
         public static final int newsiteb=0x7f070009;
         public static final int newsitee=0x7f07000a;
         public static final int nonewsite=0x7f070008;
+        public static final int noti_begin=0x7f070015;
+        public static final int noti_end=0x7f070016;
+        public static final int noti_title=0x7f070014;
         public static final int please_select_location=0x7f07000c;
         public static final int select_location=0x7f07000b;
+        public static final int select_update_time=0x7f07000f;
         public static final int setting=0x7f070001;
         public static final int siteurl=0x7f070004;
+        public static final int time_default=0x7f070013;
+        public static final int title_update=0x7f07000d;
         public static final int update=0x7f070002;
+        public static final int update_time=0x7f07000e;
+        public static final int update_title=0x7f070010;
     }
     public static final class xml {
         public static final int settings=0x7f040000;

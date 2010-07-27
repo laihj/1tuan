@@ -29,8 +29,15 @@
 	    <category android:name="android.intent.category.DEFAULT" />
 	  </intent-filter>
 	</activity>
+	<receiver android:name=".AlarmSetBoardcaseReceiver">
+	  <intent-filter>
+	    <action android:name="android.intent.action.BOOT_COMPLETED" />
+	  </intent-filter>
+	</receiver>
+	<service android:name="UpdateService" />
 	<meta-data android:value="5dedec7032309796" android:name="UmAd_APP_SEC" />
 	<meta-data android:value="aadddf88f1e49c3e" android:name="UmAd_APP_ID" />
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />  
 </manifest> 

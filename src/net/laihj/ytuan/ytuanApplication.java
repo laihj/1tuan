@@ -1,6 +1,7 @@
 package net.laihj.ytuan;
 
 import android.app.Application;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -41,6 +42,10 @@ public class ytuanApplication extends Application {
 
     public void setList(ArrayList<Site> sites) {
 	this.list = sites;
+    }
+
+    public void bootSet() {
+	Log.i("ytuan","bootset");
     }
 
 }

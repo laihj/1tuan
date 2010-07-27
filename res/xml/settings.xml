@@ -2,14 +2,32 @@
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <PreferenceCategory
+            android:title="@string/update_title">
+      <CheckBoxPreference
+                android:key="update_enable"
+                android:title="@string/title_update"
+	 android:defaultValue="true" />
+
+      <ListPreference
+                android:key="time_select_preference"
+                android:title="@string/update_time"
+                android:summary="@string/select_update_time"
+                android:entries="@array/update_time"
+                android:entryValues="@array/update_time_values"
+                android:dialogTitle="@string/update_time"
+	 android:defaultValue="@string/time_default"
+	 android:dependency="update_enable" />
+    </PreferenceCategory>
                 
     <PreferenceCategory
-            android:title="hello">
+            android:title="@string/location_title">
       <ListPreference
                 android:key="loca_preference"
                 android:title="@string/select_location"
                 android:summary="@string/please_select_location"
                 android:entries="@array/locations"
+	        android:defaultValue="@string/location_default"
                 android:entryValues="@array/location_values"
                 android:dialogTitle="@string/select_location" />
 

@@ -25,12 +25,16 @@ import android.preference.PreferenceManager;
 import net.laihj.ytuan.Site;
 import net.laihj.ytuan.SiteAdapter;
 import net.laihj.ytuan.XmlHelper;
+import net.laihj.ytuan.UpdateService;
 
 public class ytuan extends Activity
 {
 
     final static private int MENU_SETTING = Menu.FIRST;
     final static private int MENU_ABOUT = Menu.FIRST+ 1;
+
+    final static private int SETTING = 999;
+    
     /** Called when the activity is first created. */
     private ArrayList<Site> sites;
     private ListView list;
@@ -48,7 +52,6 @@ public class ytuan extends Activity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-		Log.i("start","start");
         setContentView(R.layout.ytuan);
 	res = getResources();
 	list = (ListView) findViewById(R.id.list);
@@ -66,10 +69,10 @@ public class ytuan extends Activity
     @Override
     public void onResume() {
 	super.onResume();
-	Log.i("resume","begin");
+
 	ytuanApplication application = (ytuanApplication) getApplication();
 	dbHelper = application.getDatabase();
-	Log.i("resume","i");
+
 	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 	location = prefs.getString("loca_preference","beijing");
 	Log.i("location",location);
@@ -78,6 +81,7 @@ public class ytuan extends Activity
 	this.siteAdapter = new SiteAdapter(this,sites);
 	list.setAdapter(this.siteAdapter);
 	Log.i("resume","end");
+	//	startService(new Intent(this, UpdateService.class)); 
     }
 
     //menu
@@ -91,6 +95,17 @@ public class ytuan extends Activity
 	*/
         return true;
     }
+
+    protected void onActivityResult(int requestCode, int resultCode,
+             Intent data) {
+         if (requestCode == SETTING) {
+	     Log.i("Service","start service");
+	     stopService(new Intent(this, UpdateService.class));
+	     startService(new Intent(this, UpdateService.class));
+
+         }
+     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -192,7 +207,7 @@ public class ytuan extends Activity
 		    break;
 		case R.id.setting:
 		    Intent intent = new Intent("net.laihj.ytuan.SETTING");
-		    startActivity(intent);		    
+		    startActivityForResult(intent,SETTING);		    
 		    break;
 		}
 	    }

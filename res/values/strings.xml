@@ -13,4 +13,14 @@
     <string name="newsitee">枚新的团购网站信息</string>
     <string name="select_location">关注城市</string>
     <string name="please_select_location">请选择关注的城市</string>
+    <string name="title_update">开启定时更新</string>
+    <string name="update_time">定时更新时间</string>
+    <string name="select_update_time">设置定时更新时间</string>
+    <string name="update_title">更新</string>
+    <string name="location_title">地点</string>
+    <string name="location_default">beijing</string>
+    <string name="time_default">8</string>
+    <string name="noti_title">一团团购</string>
+    <string name="noti_begin">一团为您获取了</string>
+    <string name="noti_end">个最新团购信息</string>
 </resources>
