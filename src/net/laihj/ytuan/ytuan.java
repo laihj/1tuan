@@ -10,7 +10,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View.OnClickListener;
 import android.view.View;
-import android.widget.ImageView;
+
 import android.app.ProgressDialog;
 import android.os.Handler;
 import android.os.Message;
@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import android.widget.Toast;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-
+import android.widget.ImageView;
 import net.laihj.ytuan.Site;
 import net.laihj.ytuan.SiteAdapter;
 import net.laihj.ytuan.XmlHelper;

@@ -60,12 +60,12 @@
     <url>http://tuan.aibang.com/tuan/feed_%E5%8C%97%E4%BA%AC</url>
     <backurl>http://tuan.aibang.com/t/703247</backurl>
   </site>
-  <site ver="2">
+ <!-- <site ver="2">
     <loca>shanghai</loca>
     <title>爱帮</title>
     <url>http://tuan.aibang.com/tuancity_%E4%B8%8A%E6%B5%B7</url>
     <backurl>http://t.58.com/index_cbj.html</backurl>
-  </site>
+  </site> -->
 
   <site ver="2">
     <loca>beijing</loca>
@@ -103,5 +103,35 @@
     <title>健团</title>
     <url>http://tuan.51fit.com/feed.php?ename=beijing</url>
     <backurl>http://tuan.51fit.com/index.php</backurl>
+  </site>
+  <site ver="3">
+    <loca>shanghai</loca>
+    <title>大众点评</title>
+    <url>http://t.dianping.com/rss/shanghai</url>
+    <backurl>http://t.dianping.com/shanghai</backurl>
+  </site>
+  <site ver="3">
+    <loca>beijing</loca>
+    <title>大众点评</title>
+    <url>http://t.dianping.com/rss/beijing</url>
+    <backurl>http://t.dianping.com/beijing</backurl>
+  </site>
+  <site ver="3">
+    <loca>beijing</loca>
+    <title>大洋</title>
+    <url>http://www.dytuan.com/feed.php?ename=beijing</url>
+    <backurl>http://www.dytuan.com/index.php</backurl>
+  </site>
+  <site ver="3">
+    <loca>beijing</loca>
+    <title>大众点评</title>
+    <url>http://www.dytuan.com/feed.php?ename=shanghai</url>
+    <backurl>http://www.dytuan.com/index.php</backurl>
+  </site>
+  <site ver="3">
+    <loca>shanghai</loca>
+    <title>猛买</title>
+    <url>http://www.feedsky.com/mengmai</url>
+    <backurl>http://www.mengmai.com/r.php?r=8795</backurl>
   </site>
 </sites>

@@ -38,20 +38,18 @@ public class UpdateService extends Service {
 
     private TimerTask task = new TimerTask() {
 	    public void run() {
-		int count = 1;
-		Log.i("Service","update");
+		int count = 0;
 		for(Site site:UpdateService.this.sites) {
 		    XmlHelper.updateFeed(site);
 		    if(site.updated) {
 			dbHelper.update(site);
 			site.updated = false;
+			count++;
 		    }
-		    count++;
 		}
 		if( count > 0 ) {
 		    showNotification(""+count);
 		}
-		Log.i("Service","update complete");
 	    }
 	};
     private void showNotification(String count) {
@@ -72,7 +70,6 @@ public class UpdateService extends Service {
     
     @Override
     public void onCreate() {
-	Log.i("service","create");
 	mNM = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
 	res = getResources();
     }
