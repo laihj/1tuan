@@ -33,7 +33,7 @@
   <site ver="1">
     <loca>beijing</loca>
     <title>猛买</title>
-    <url>http://www.feedsky.com/mengmai</url>
+    <url>http://feed.feedsky.com/mengmai</url>
     <backurl>http://www.mengmai.com/r.php?r=8795</backurl>
   </site>
   <site ver="2">
@@ -123,15 +123,9 @@
     <backurl>http://www.dytuan.com/index.php</backurl>
   </site>
   <site ver="3">
-    <loca>beijing</loca>
-    <title>大众点评</title>
-    <url>http://www.dytuan.com/feed.php?ename=shanghai</url>
-    <backurl>http://www.dytuan.com/index.php</backurl>
-  </site>
-  <site ver="3">
     <loca>shanghai</loca>
     <title>猛买</title>
-    <url>http://www.feedsky.com/mengmai</url>
+    <url>http://feed.feedsky.com/mengmai</url>
     <backurl>http://www.mengmai.com/r.php?r=8795</backurl>
   </site>
 </sites>
