@@ -41,11 +41,9 @@ public class siteHandler extends DefaultHandler {
 	long version;
 	if( localName.equals("site") ) {
 	    version = Integer.parseInt(getAttributeValue("ver",atts));
-	    if (version > this.version) {
 		this.startSite = true;
 		this.site = new Site();
 		this.site.version = version;
-	    }
 	}
 
 	if (this.startSite) {

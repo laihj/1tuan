@@ -169,10 +169,14 @@ public class ytuan extends Activity
 	    updateSite = XmlHelper.getUpdateSite(res.getString(R.string.siteurl),ver);
 	    
 	    for (Site site:updateSite) {
-		if(this.location.equals(site.location)) {
-		    this.sites.add(site);
+		if (site.version > ver) {
+		    if(this.location.equals(site.location)) {
+			this.sites.add(site);
+		    }
+		    site.id = dbHelper.insert(site);
+		} else {
+		    dbHelper.updateByLocation(site);
 		}
-		site.id = dbHelper.insert(site);
 	    }
     }
 

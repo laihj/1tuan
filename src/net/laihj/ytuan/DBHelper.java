@@ -109,6 +109,21 @@ public class DBHelper
 	this.db.update(DBHelper.DB_TABLE,values,"_id=" + site.id, null);
     }
 
+    public void updateByLocation(final Site site) {
+	ContentValues values = new ContentValues();
+	values.put("site_name",site.name);
+	values.put("feedurl",site.feedurl);
+	values.put("title",site.title);
+	values.put("summary",site.summary);
+	values.put("location",site.location);
+	values.put("showable",site.showable);
+	values.put("readed",site.readed);
+	values.put("ver",site.version);
+	values.put("backurl",site.backurl);
+	values.put("parse",site.parse);
+	this.db.update(DBHelper.DB_TABLE,values,"site_name='" + site.name + "' and location='" + site.location + "'", null);
+    }
+
     public void delete(final long id) {
 	this.db.delete(DBHelper.DB_TABLE,"_id=" + id,null);
     }
