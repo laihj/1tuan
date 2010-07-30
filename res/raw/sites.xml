@@ -57,15 +57,15 @@
   <site ver="2">
     <loca>beijing</loca>
     <title>爱帮</title>
-    <url>http://tuan.aibang.com/tuan/feed_%E5%8C%97%E4%BA%AC</url>
+    <url>http://tuan.aibang.com/beijing/feed</url>
     <backurl>http://tuan.aibang.com/t/703247</backurl>
   </site>
- <!-- <site ver="2">
+  <site ver="2">
     <loca>shanghai</loca>
     <title>爱帮</title>
-    <url>http://tuan.aibang.com/tuancity_%E4%B8%8A%E6%B5%B7</url>
+    <url>http://tuan.aibang.com/shanghai/feed</url>
     <backurl>http://t.58.com/index_cbj.html</backurl>
-  </site> -->
+  </site>
 
   <site ver="2">
     <loca>beijing</loca>
@@ -128,4 +128,28 @@
     <url>http://feed.feedsky.com/mengmai</url>
     <backurl>http://www.mengmai.com/r.php?r=8795</backurl>
   </site>
+  <site ver="4">
+    <loca>qg</loca>
+    <title>折扣网</title>
+    <url>http://www.zktuan.com/feed.php?ename=country</url>
+    <backurl>http://www.zktuan.com</backurl>
+  </site>
+  <site ver="4">
+    <loca>qg</loca>
+    <title>团多多</title>
+    <url>http://www.tuandodo.com/feed.php?ename=CHINA</url>
+    <backurl>http://www.tuandodo.com</backurl>
+  </site>
+  <site ver="4">
+    <loca>shanghai</loca>
+    <title>淘玩购</title>
+    <url>http://www.twangou.com/feed.php?ename=shanghai</url>
+    <backurl>http://www.twangou.com</backurl>
+  </site>
 </sites>
+<!--
+http://www.zktuan.com/feed.php?ename=country   http://www.zktuan.com/
+http://www.tuandodo.com/feed.php?ename=CHINA   http://www.tuandodo.com
+
+http://www.twangou.com/feed.php?ename=shanghai  http://www.twangou.com/
+-->

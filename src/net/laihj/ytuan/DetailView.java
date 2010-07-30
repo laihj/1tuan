@@ -19,7 +19,7 @@ import android.net.Uri;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Animation;
 
-    
+import net.youmi.android.AdView;    
 
 import java.util.ArrayList;
 import java.lang.StringBuilder;

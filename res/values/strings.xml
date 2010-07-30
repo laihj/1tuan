@@ -23,4 +23,5 @@
     <string name="noti_title">一团团购</string>
     <string name="noti_begin">一团为您获取了</string>
     <string name="noti_end">个最新团购信息</string>
+    <string name="clearall">清空并重新获取数据</string>
 </resources>

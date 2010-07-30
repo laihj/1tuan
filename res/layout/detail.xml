@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	      xmlns:umadsdk="http://schemas.android.com/apk/res/net.laihj.ytuan"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
+  <net.youmi.android.AdView
+     android:id="@+id/ad"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     umadsdk:refreshInterval="30"
+     umadsdk:changeAdAnimation="true"
+     umadsdk:backgroundTransparent="255"
+     />
 
 
   <TextView android:id="@+id/title"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:maxLines="3"
+	    android:maxLines="0"
 	    android:background="#AA000000"
 	    android:textColor="#FFFFFFFF"
 	    android:layout_weight="1"
 	    >
   </TextView>
-  <LinearLayout android:layout_height="3sp"
-		android:layout_width="fill_parent"
-		android:layout_weight="1"
-		android:background="@drawable/spar" />
-
   <WebView android:id="@+id/detail"
 	   android:layout_width="fill_parent"
 	   android:layout_height="fill_parent"

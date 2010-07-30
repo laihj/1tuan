@@ -27,10 +27,12 @@ import net.laihj.ytuan.SiteAdapter;
 import net.laihj.ytuan.XmlHelper;
 import net.laihj.ytuan.UpdateService;
 
+import net.youmi.android.AdView;
+
 public class ytuan extends Activity
 {
 
-    final static private int MENU_SETTING = Menu.FIRST;
+    final static private int MENU_CLEARALL = Menu.FIRST;
     final static private int MENU_ABOUT = Menu.FIRST+ 1;
 
     final static private int SETTING = 999;
@@ -76,7 +78,7 @@ public class ytuan extends Activity
 	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 	location = prefs.getString("loca_preference","beijing");
 	Log.i("location",location);
-	this.sites =(ArrayList<Site>) dbHelper.getAll("('" + location + "')");
+	this.sites =(ArrayList<Site>) dbHelper.getAll("('" + location + "','qg')");
 	application.setList(this.sites);
 	this.siteAdapter = new SiteAdapter(this,sites);
 	list.setAdapter(this.siteAdapter);
@@ -88,9 +90,8 @@ public class ytuan extends Activity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-	/*        menu.add(0, MENU_SETTING, 0, R.string.setting).setIcon(
-            android.R.drawable.ic_menu_preferences);
-        menu.add(0, MENU_ABOUT, 0, R.string.update).setIcon(
+        menu.add(0, MENU_CLEARALL, 0, R.string.clearall);
+        /*menu.add(0, MENU_ABOUT, 0, R.string.update).setIcon(
             android.R.drawable.ic_menu_preferences);
 	*/
         return true;
@@ -111,8 +112,11 @@ public class ytuan extends Activity
     public boolean onOptionsItemSelected(MenuItem item) {
 	ytuanApplication application = (ytuanApplication) getApplication();
 	switch (item.getItemId()) {
-        case MENU_SETTING:
-
+        case MENU_CLEARALL:
+	    dbHelper = application.getDatabase();
+	    dbHelper.clearall();
+	    this.sites.clear();
+	    updateSites();
 	    return true;
 	case MENU_ABOUT:
 	    dbHelper = application.getDatabase();
@@ -170,12 +174,12 @@ public class ytuan extends Activity
 	    
 	    for (Site site:updateSite) {
 		if (site.version > ver) {
-		    if(this.location.equals(site.location)) {
+		    if(this.location.equals(site.location) || "qg".equals(site.location)) {
 			this.sites.add(site);
 		    }
 		    site.id = dbHelper.insert(site);
 		} else {
-		    dbHelper.updateByLocation(site);
+		    //		    dbHelper.updateByLocation(site);
 		}
 	    }
     }

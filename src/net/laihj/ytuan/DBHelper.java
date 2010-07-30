@@ -128,6 +128,10 @@ public class DBHelper
 	this.db.delete(DBHelper.DB_TABLE,"_id=" + id,null);
     }
 
+    public void clearall() {
+	this.db.execSQL("delete from sites");
+    }
+
     public long getMaxVersion() {
 	Cursor c = null;
 	long ret = 0;
