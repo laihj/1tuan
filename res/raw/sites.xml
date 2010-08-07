@@ -24,6 +24,13 @@
     <url>http://www.lashou.com/rss.php?cityid=2421</url>
     <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
   </site>
+  <site ver="6">
+    <loca>gz</loca>
+    <title>拉手</title>
+    <url>http://www.lashou.com/rss.php?cityid=2422</url>
+    <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
+  </site>
+
   <site ver="1">
     <loca>beijing</loca>
     <title>F团</title>
@@ -31,7 +38,7 @@
     <backurl>http://www.ftuan.com/r.php?r=4287</backurl>
   </site>
   <site ver="1">
-    <loca>beijing</loca>
+    <loca>qg</loca>
     <title>猛买</title>
     <url>http://feed.feedsky.com/mengmai</url>
     <backurl>http://www.mengmai.com/r.php?r=8795</backurl>
@@ -66,6 +73,18 @@
     <url>http://tuan.aibang.com/shanghai/feed</url>
     <backurl>http://t.58.com/index_cbj.html</backurl>
   </site>
+  <site ver="6">
+    <loca>gz</loca>
+    <title>嘀嗒团</title>
+    <url>http://didatuan.com/feed.php?ename=guangzhou</url>
+    <backurl>http://didatuan.com/index.php</backurl>
+  </site>
+  <site ver="6">
+    <loca>gz</loca>
+    <title>美团</title>
+    <url>http://www.meituan.com/feed/guangzhou</url>
+    <backurl>http://www.meituan.com/r/i5285</backurl>
+  </site>
 
   <site ver="2">
     <loca>beijing</loca>
@@ -99,12 +118,6 @@
     <backurl>http://www.zhexuexi.com/</backurl>
   </site>
   <site ver="3">
-    <loca>beijing</loca>
-    <title>健团</title>
-    <url>http://tuan.51fit.com/feed.php?ename=beijing</url>
-    <backurl>http://tuan.51fit.com/index.php</backurl>
-  </site>
-  <site ver="3">
     <loca>shanghai</loca>
     <title>大众点评</title>
     <url>http://t.dianping.com/rss/shanghai</url>
@@ -122,12 +135,7 @@
     <url>http://www.dytuan.com/feed.php?ename=beijing</url>
     <backurl>http://www.dytuan.com/index.php</backurl>
   </site>
-  <site ver="3">
-    <loca>shanghai</loca>
-    <title>猛买</title>
-    <url>http://feed.feedsky.com/mengmai</url>
-    <backurl>http://www.mengmai.com/r.php?r=8795</backurl>
-  </site>
+
   <site ver="4">
     <loca>qg</loca>
     <title>折扣网</title>
@@ -146,10 +154,49 @@
     <url>http://www.twangou.com/feed.php?ename=shanghai</url>
     <backurl>http://www.twangou.com</backurl>
   </site>
+
+  <site ver="5">
+    <loca>shanghai</loca>
+    <title>F团</title>
+    <url>http://www.ftuan.com/feed.php?ename=shanghai</url>
+    <backurl>http://www.ftuan.com/r.php?r=4287</backurl>
+  </site>
+  <site ver="5">
+    <loca>shanghai</loca>
+    <title>24券</title>
+    <url>http://www.24quan.com/feed.php?ename=sh</url>
+    <backurl>http://www.24quan.com/r.php?r=75164</backurl>
+  </site>
+  <site ver="5">
+    <loca>shanghai</loca>
+    <title>网团</title>
+    <url>http://www.nettuan.com/feed.php?ename=shanghai</url>
+    <backurl>http://www.nettuan.com/r.php?r=4625</backurl>
+  </site>
+
+  <site ver="6">
+    <loca>shanghai</loca>
+    <title>喜团</title>
+    <url>http://www.xituan.com/feed.php?ename=sh</url>
+    <backurl>http://www.xituan.com</backurl>
+  </site>
+  <site ver="7">
+    <loca>gz</loca>
+    <title>珍惜</title>
+    <url>http://www.zhenxi.com/guangzhou/feed</url>
+    <backurl>http://www.zhenxi.com</backurl>
+  </site>
+  <site ver="7">
+    <loca>qg</loca>
+    <title>VC团</title>
+    <url>http://www.vctuan.com/feed.php?ename=China</url>
+    <backurl>http://www.vctuan.com</backurl>
+  </site>
 </sites>
 <!--
 http://www.zktuan.com/feed.php?ename=country   http://www.zktuan.com/
 http://www.tuandodo.com/feed.php?ename=CHINA   http://www.tuandodo.com
 
 http://www.twangou.com/feed.php?ename=shanghai  http://www.twangou.com/
+
 -->

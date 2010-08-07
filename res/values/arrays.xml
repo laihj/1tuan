@@ -3,10 +3,14 @@
     <string-array name="locations">
         <item>北京</item>
         <item>上海</item>
+        <item>广州</item>
+	<item>其它</item>
     </string-array>
     <string-array name="location_values">
         <item>beijing</item>
         <item>shanghai</item>
+	<item>gz</item>
+	<item>other</item>
     </string-array>
 
     <string-array name="update_time">

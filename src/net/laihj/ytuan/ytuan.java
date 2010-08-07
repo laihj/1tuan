@@ -78,6 +78,7 @@ public class ytuan extends Activity
 	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 	location = prefs.getString("loca_preference","beijing");
 	Log.i("location",location);
+	
 	this.sites =(ArrayList<Site>) dbHelper.getAll("('" + location + "','qg')");
 	application.setList(this.sites);
 	this.siteAdapter = new SiteAdapter(this,sites);

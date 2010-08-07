@@ -81,7 +81,7 @@ public class DetailView extends Activity
     void updateDView() {
 	titleView.setText(this.site.title);
 	setTitle(this.site.name);
-	detailView.loadDataWithBaseURL("ablut:blank",procHtml(this.site.summary), "text/html", "utf-8",null);
+	detailView.loadDataWithBaseURL("ablut:blank",procHtml(this.site.title,this.site.summary), "text/html", "utf-8",null);
 	if( this.site.readed == false) {
 	    this.site.readed = true;
 	    ytuanApplication application = (ytuanApplication) getApplication();
@@ -89,7 +89,7 @@ public class DetailView extends Activity
 	}
     }
 
-    private String procHtml(String summary) {
+    private String procHtml(String title,String summary) {
 	StringBuilder sb = new StringBuilder();
 	sb.append("<html><head>");
 	sb.append("<style type=\"text/css\">");
@@ -97,6 +97,7 @@ public class DetailView extends Activity
 	Log.i("web",sb.toString());
 	sb.append("</style>");
 	sb.append("</head><body>");
+	sb.append("<div><b>" + title + "<b></div><br/>");
 	sb.append(summary);
 	sb.append("</body></html>");
 	return sb.toString();
