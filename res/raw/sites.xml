@@ -12,6 +12,12 @@
     <url>http://www.meituan.com/feed/shanghai</url>
     <backurl>http://www.meituan.com/r/i5285</backurl>
   </site>
+  <site ver="9">
+    <loca>xian</loca>
+    <title>美团</title>
+    <url>http://www.meituan.com/feed/xian</url>
+    <backurl>http://www.meituan.com/r/i5285</backurl>
+  </site>
   <site ver="1">
     <loca>beijing</loca>
     <title>拉手</title>
@@ -30,11 +36,35 @@
     <url>http://www.lashou.com/rss.php?cityid=2422</url>
     <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
   </site>
+  <site ver="8">
+    <loca>sz</loca>
+    <title>拉手</title>
+    <url>http://www.lashou.com/rss.php?cityid=372</url>
+    <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
+  </site>
+  <site ver="8">
+    <loca>hz</loca>
+    <title>拉手</title>
+    <url>http://www.lashou.com/rss.php?cityid=2259</url>
+    <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
+  </site>
+  <site ver="9">
+    <loca>xian</loca>
+    <title>拉手</title>
+    <url>http://www.lashou.com/rss.php?cityid=1494</url>
+    <backurl>http://www.lashou.com/regs.php?inviter=1672330</backurl>
+  </site>
 
   <site ver="1">
     <loca>beijing</loca>
     <title>F团</title>
     <url>http://www.ftuan.com/feed.php?ename=beijing</url>
+    <backurl>http://www.ftuan.com/r.php?r=4287</backurl>
+  </site>
+  <site ver="8">
+    <loca>sz</loca>
+    <title>F团</title>
+    <url>http://www.ftuan.com/feed.php?ename=shenzhen</url>
     <backurl>http://www.ftuan.com/r.php?r=4287</backurl>
   </site>
   <site ver="1">
@@ -58,8 +88,8 @@
   <site ver="2">
     <loca>beijing</loca>
     <title>58同城</title>
-    <url>http://t.58.com/rss_c2.html</url>
-    <backurl>http://tuan.aibang.com/t/703247</backurl>
+    <url>http://t.58.com/bj/rss</url>
+    <backurl>http://t.58.com/bj</backurl>
   </site>
   <site ver="2">
     <loca>beijing</loca>
@@ -71,14 +101,35 @@
     <loca>shanghai</loca>
     <title>爱帮</title>
     <url>http://tuan.aibang.com/shanghai/feed</url>
-    <backurl>http://t.58.com/index_cbj.html</backurl>
+    <backurl>http://tuan.aibang.com/t/703247</backurl>
   </site>
+  <site ver="8">
+    <loca>sz</loca>
+    <title>爱帮</title>
+    <url>http://tuan.aibang.com/shenzhen/feed</url>
+    <backurl>http://tuan.aibang.com/t/703247</backurl>
+  </site>
+
   <site ver="6">
     <loca>gz</loca>
     <title>嘀嗒团</title>
     <url>http://didatuan.com/feed.php?ename=guangzhou</url>
     <backurl>http://didatuan.com/index.php</backurl>
   </site>
+  <site ver="8">
+    <loca>hz</loca>
+    <title>嘀嗒团</title>
+    <url>http://didatuan.com/feed.php?ename=hangzhou</url>
+    <backurl>http://didatuan.com/index.php</backurl>
+  </site>
+  <site ver="9">
+    <loca>xian</loca>
+    <title>嘀嗒团</title>
+    <url>http://didatuan.com/feed.php?ename=xian</url>
+    <backurl>http://didatuan.com/index.php</backurl>
+  </site>
+
+
   <site ver="6">
     <loca>gz</loca>
     <title>美团</title>
@@ -135,6 +186,12 @@
     <url>http://www.dytuan.com/feed.php?ename=beijing</url>
     <backurl>http://www.dytuan.com/index.php</backurl>
   </site>
+  <site ver="3">
+    <loca>hz</loca>
+    <title>大洋</title>
+    <url>http://www.dytuan.com/feed.php?ename=zhejiang</url>
+    <backurl>http://www.dytuan.com/index.php</backurl>
+  </site>
 
   <site ver="4">
     <loca>qg</loca>
@@ -167,6 +224,12 @@
     <url>http://www.24quan.com/feed.php?ename=sh</url>
     <backurl>http://www.24quan.com/r.php?r=75164</backurl>
   </site>
+  <site ver="8">
+    <loca>sz</loca>
+    <title>24券</title>
+    <url> http://www.24quan.com/feed.php?ename=sz</url>
+    <backurl>http://www.24quan.com/r.php?r=75164</backurl>
+  </site>
   <site ver="5">
     <loca>shanghai</loca>
     <title>网团</title>
@@ -186,6 +249,19 @@
     <url>http://www.zhenxi.com/guangzhou/feed</url>
     <backurl>http://www.zhenxi.com</backurl>
   </site>
+  <site ver="8">
+    <loca>sz</loca>
+    <title>珍惜</title>
+    <url>http://www.zhenxi.com/shenzhen/feed</url>
+    <backurl>http://www.zhenxi.com</backurl>
+  </site>
+  <site ver="8">
+    <loca>sz</loca>
+    <title>魔力</title>
+    <url>http://www.molituan.com/feed.php?ename=shenzhen</url>
+    <backurl>http://www.molituan.com/</backurl>
+  </site>
+
   <site ver="7">
     <loca>qg</loca>
     <title>VC团</title>

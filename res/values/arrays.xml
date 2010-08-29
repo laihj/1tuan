@@ -3,13 +3,19 @@
     <string-array name="locations">
         <item>北京</item>
         <item>上海</item>
+        <item>深圳</item>
         <item>广州</item>
+        <item>杭州</item>
+        <item>西安</item>
 	<item>其它</item>
     </string-array>
     <string-array name="location_values">
         <item>beijing</item>
         <item>shanghai</item>
+        <item>sz</item>
 	<item>gz</item>
+        <item>hz</item>
+        <item>xian</item>
 	<item>other</item>
     </string-array>
 
